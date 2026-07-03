@@ -3,7 +3,7 @@
 A **cost-optimized** fork of the feature-dev plugin. It keeps the structured,
 high-quality 7-phase feature workflow but cuts token spend: graph-driven
 exploration, a single pragmatic architecture, a single git-diff reviewer,
-per-phase model assignment, and terse summaries.
+Sonnet 5 across phases, and short summaries with suggested commit messages.
 
 Primarily intended for **GitHub Copilot CLI** (loadable via `/plugin`).
 
@@ -25,10 +25,10 @@ trims that while protecting output quality.
 | 2 Exploration | 2–3 `code-explorer` agents, read all surfaced files | **1** `code-explorer-lite` driven by the **graphify** graph; read only ~5 essential files |
 | 4 Architecture | 2–3 `code-architect` agents, multiple approaches | **1** `code-architect-lite`, **one** pragmatic-balance approach, confirm before building |
 | 6 Review | 3 `code-reviewer` agents | **1** `code-reviewer-lite`, **`git diff`** default scope; ask before adding a 2nd on security/auth/payments/data-migration |
-| 7 Summary | prose summary | **1** `summary-writer-lite`; file paths, symbols, decisions over prose |
-| Models | sonnet everywhere | **per-phase** model assignment (below) |
+| 7 Summary | prose summary | **1** `summary-writer-lite`; short wrap-up plus suggested commit message |
+| Models | sonnet everywhere | **Sonnet 5** for main session and all subagents |
 
-## Per-phase model assignment
+## Model assignment
 
 | Phase | Work | Model |
 |-------|------|-------|
@@ -106,9 +106,9 @@ focused reviewer — it never auto-spawns extra reviewers. You decide what to do
 with findings (fix now / later / proceed).
 
 ### Phase 7: Summary — *1 agent, Sonnet 5*
-A `summary-writer-lite` agent writes a terse wrap-up: what was built
-(symbol + `file:line`), key decisions, files changed, optional next steps —
-**no prose recap**.
+A `summary-writer-lite` agent writes a short final wrap-up: outcome, key changed
+files, optional verification/next step, and a suggested one-line commit message.
+It must not include coauthor, generated-by, or AI/tool attribution.
 
 ## Agents
 
@@ -117,7 +117,7 @@ A `summary-writer-lite` agent writes a terse wrap-up: what was built
 - **`code-architect-lite`** (Sonnet 5) — one decisive pragmatic-balance blueprint.
 - **`code-reviewer-lite`** (Sonnet 5) — single reviewer, `git diff` default,
   confidence-filtered.
-- **`summary-writer-lite`** (Sonnet 5) — terse path/symbol/decision summary.
+- **`summary-writer-lite`** (Sonnet 5) — short wrap-up plus one-line commit message.
 
 ## Additional cost-saving behaviors
 
@@ -125,7 +125,7 @@ A `summary-writer-lite` agent writes a terse wrap-up: what was built
 - Read only the top ~5 essential files, not everything surfaced.
 - Cap clarifying questions to genuinely blocking ones.
 - Trimmed agent tool lists to keep context small.
-- Terse agent prompts and outputs (`file:line`, symbols, bullets).
+- Short agent prompts and outputs (`file:line`, symbols, bullets, one-line commit messages).
 - `/compact` suggested after exploration; fast-path for trivial changes.
 
 ## Attribution
@@ -135,4 +135,4 @@ The "lite" adjustments optimize for cost on GitHub Copilot CLI.
 
 ## Version
 
-1.1.0
+1.2.0
