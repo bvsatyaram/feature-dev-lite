@@ -1,5 +1,5 @@
 ---
-description: Cost-optimized guided feature development (graphify exploration, single pragmatic architecture, single git-diff reviewer, per-phase models, terse summary)
+description: Cost-optimized guided feature development (graphify exploration, single pragmatic architecture, single git-diff reviewer, Sonnet 5 agents, short summary plus commit message)
 argument-hint: Optional feature description
 ---
 
@@ -147,9 +147,9 @@ Initial request: $ARGUMENTS
 
 **Actions**:
 1. Mark all todos complete.
-2. Launch the `summary-writer-lite` agent (Sonnet 5) to produce the wrap-up.
-   It must **prefer file paths, symbols, and decisions over prose**: what was
-   built (symbol + `file:line`), key decisions (one line each), files changed,
-   and optional next steps. No process recap, no marketing language.
+2. Launch the `summary-writer-lite` agent to produce a short wrap-up and a
+   suggested one-line commit message. It must keep the summary under 12 lines,
+   list only the most relevant changed files, and must not include coauthor,
+   generated-by, or AI/tool attribution.
 
 ---

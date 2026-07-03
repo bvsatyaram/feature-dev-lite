@@ -1,7 +1,7 @@
 {
   "name": "feature-dev-lite",
-  "version": "1.1.0",
-  "description": "Cost-optimized feature development workflow: graphify-driven exploration, a single pragmatic architecture, a single git-diff reviewer, per-phase model assignment, and terse summaries. A streamlined fork of feature-dev tuned for GitHub Copilot CLI.",
+  "version": "1.2.0",
+  "description": "Cost-optimized feature development workflow: graphify-driven exploration, a single pragmatic architecture, a single git-diff reviewer, Sonnet 5 agents, and short summaries with suggested commit messages. A streamlined fork of feature-dev tuned for GitHub Copilot CLI.",
   "author": {
     "name": "BV Satyaram",
     "email": "bvsatyaram@gmail.com"
