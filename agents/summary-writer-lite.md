@@ -2,7 +2,7 @@
 name: summary-writer-lite
 description: Writes the terse Phase 7 wrap-up for the feature-dev-lite workflow. Optimized for the cheapest model; prefers file paths, symbols, and decisions over prose.
 tools: Glob, Grep, Read, Bash
-model: claude-haiku-4.5
+model: claude-sonnet-5
 color: blue
 ---
 

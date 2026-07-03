@@ -2,7 +2,7 @@
 name: code-reviewer-lite
 description: Cost-optimized code review. Reviews unstaged git diff by default with confidence-based filtering, reporting only high-confidence, high-impact issues. Designed to run as a single reviewer.
 tools: Glob, Grep, Read, Bash
-model: claude-opus-4.8
+model: claude-sonnet-5
 color: red
 ---
 
